@@ -284,6 +284,26 @@ class AudioEngine {
     var isPlaying: Bool {
         return speechPlayer.isPlaying
     }
+
+    func stopPlayback() {
+        speechPlayer.stop()
+        // Clear any scheduled buffers
+        outputBuffer = [Float](repeating: 0, count: 2048)
+        updateOutputVolume()
+        print("Playback stopped")
+    }
+
+    func pausePlayback() {
+        speechPlayer.pause()
+        print("Playback paused")
+    }
+
+    func resumePlayback() {
+        if !speechPlayer.isPlaying {
+            speechPlayer.play()
+            print("Playback resumed")
+        }
+    }
     
     private func checkEngineIsRunning() {
         if !avAudioEngine.isRunning {

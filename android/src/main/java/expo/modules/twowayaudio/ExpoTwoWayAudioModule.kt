@@ -70,6 +70,18 @@ class ExpoTwoWayAudioModule : Module() {
              audioEngine?.isPlaying ?: false
          }
 
+         Function("stopPlayback") {
+             audioEngine?.stopPlayback()
+         }
+
+         Function("pausePlayback") {
+             audioEngine?.pausePlayback()
+         }
+
+         Function("resumePlayback") {
+             audioEngine?.resumePlayback()
+         }
+
         Function("getMicrophoneModeIOS") {
             throw UnsupportedOperationException("getMicrophoneModeIOS is only supported on iOS")
         }

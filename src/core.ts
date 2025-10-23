@@ -44,3 +44,19 @@ export function getMicrophoneModeIOS() {
 export function setMicrophoneModeIOS() {
   return ExpoTwoWayAudioModule.setMicrophoneModeIOS();
 }
+
+export function isPlaying(): boolean {
+  return ExpoTwoWayAudioModule.isPlaying();
+}
+
+export function stopPlayback() {
+  return ExpoTwoWayAudioModule.stopPlayback();
+}
+
+export function pausePlayback() {
+  return ExpoTwoWayAudioModule.pausePlayback();
+}
+
+export function resumePlayback() {
+  return ExpoTwoWayAudioModule.resumePlayback();
+}

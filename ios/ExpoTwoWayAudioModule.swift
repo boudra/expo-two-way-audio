@@ -118,6 +118,18 @@ public class ExpoTwoWayAudioModule: Module {
             return self.audioEngine?.isPlaying ?? false
         }
 
+        Function("stopPlayback") {
+            self.audioEngine?.stopPlayback()
+        }
+
+        Function("pausePlayback") {
+            self.audioEngine?.pausePlayback()
+        }
+
+        Function("resumePlayback") {
+            self.audioEngine?.resumePlayback()
+        }
+
         AsyncFunction("getMicrophonePermissionsAsync") { (promise: Promise) in
             EXPermissionsMethodsDelegate.getPermissionWithPermissionsManager(
                 self.appContext?.permissions,
