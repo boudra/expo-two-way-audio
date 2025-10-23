@@ -1,6 +1,6 @@
 {
   "name": "@boudra/expo-two-way-audio",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Native module for two way audio streaming",
   "main": "build/index.js",
   "types": "build/index.d.ts",
@@ -16,7 +16,12 @@
     "open:ios": "xed examples/basic-usage/ios",
     "open:android": "open -a \"Android Studio\" examples/basic-usage/android"
   },
-  "keywords": ["react-native", "expo", "expo-two-way-audio", "ExpoTwoWayAudio"],
+  "keywords": [
+    "react-native",
+    "expo",
+    "expo-two-way-audio",
+    "ExpoTwoWayAudio"
+  ],
   "repository": "https://github.com/speechmatics/expo-two-way-audio",
   "bugs": {
     "url": "https://github.com/speechmatics/expo-two-way-audio/issues"
